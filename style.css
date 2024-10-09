@@ -1,0 +1,124 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(https://www.shutterstock.com/image-vector/optimism-seamless-vector-pattern-word-260nw-74051803.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+
+        }
+
+        .glass {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            align-self: center;
+            background-color: rgba(255, 255, 255, 0.785);
+        }
+
+        .gamename {
+            font-family: "Kaushan Script", cursive;
+            font-size: 5rem;
+            position: relative;
+
+        }
+
+        p {
+            font-family: "Caveat", cursive;
+            font-size: 2rem;
+            position: relative;
+
+        }
+
+        .form {
+            height: 100%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            margin: 0.5rem;
+        }
+
+        .submitguess {
+            background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
+            color: white;
+            height: 2rem;
+            width: 6rem;
+            position: relative;
+            border: 0.5px solid white;
+            border-radius: 2rem;
+            font-family: "Kaushan Script", cursive;
+            margin: 0.5rem;
+        }
+
+        .labelname {
+            font-family: "Kaushan Script", cursive;
+            position: relative;
+            font-size: 1.5rem;
+        }
+
+        #guessfield {
+            border: 0.5px solid black;
+            position: relative;
+            border-radius: 2rem;
+            height: 2rem;
+            width: 10rem;
+            margin-top: 0.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        #choicefield {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 0.5px solid black;
+            position: relative;
+            border-radius: 2rem;
+            height: 2rem;
+            width: 12rem;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .resultpara {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #playagain{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Kaushan Script", cursive;
+            font-size: 1rem;
+            background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
+            color: white;
+            height: 2rem;
+            width: 6rem;
+            position: relative;
+            border: 0.5px solid white;
+            border-radius: 2rem;
+            margin: 0.5rem;
+        }
