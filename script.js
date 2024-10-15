@@ -1,4 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 const wordCategories = {
         Animals: ["Dog", "Cat", "Elephant", "Lion", "Tiger", "Bear", "Deer", "Wolf", "Jaguar"],
         Countries: ["India", "China", "France", "Nepal", "Brazil", "Canada", "United Kingdom", "Germany", "Italy"],
