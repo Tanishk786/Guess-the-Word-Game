@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 const wordCategories = {
         Animals: ["Dog", "Cat", "Elephant", "Lion", "Tiger", "Bear", "Deer", "Wolf", "Jaguar"],
         Countries: ["India", "China", "France", "Nepal", "Brazil", "Canada", "United Kingdom", "Germany", "Italy"],
@@ -60,7 +61,6 @@ const wordCategories = {
     let enteredVal = '';
     let wordguess = 0;
 
-
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         enteredVal = enteredValue.value.trim();
@@ -83,10 +83,10 @@ const wordCategories = {
             checkguess(unique, enteredVal);
 
             enteredValue.value = '';
-
         }
 
     })
+
 
 
     // ------------ check guess function -------------
@@ -95,6 +95,39 @@ const wordCategories = {
 
         if ((wordguess <= 3 ) && (unique === enteredVal || unique.toLowerCase() === enteredVal.toLowerCase())) {
             displaymessage("Incredible, You have nailed it");
+
+
+    // green light 
+            let greenlight = document.querySelector('.container').style.boxShadow = 'inset 10px 5px 250px 100px rgba(64, 255, 95, 0.5)';
+
+
+                // confetti effect.........
+
+                var end = Date.now() + (20 * 100);
+
+                var colors = ['#bb0000', '#000080'];
+
+                (function frame() {
+                confetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors
+                  });
+
+                  if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                  }
+                }());
+                
 
             endGame();
 
@@ -109,6 +142,11 @@ const wordCategories = {
         
         else if (unique !== enteredVal) {
             const random = (Math.random() * unique.length);
+
+            // alert effect 
+
+               
+            //----------------
 
             if (random >= 2.5 && random < 5) {
 
@@ -198,7 +236,7 @@ const wordCategories = {
         document.querySelector('#subt').disabled = true;
         document.querySelector('#guessfield').disabled = true;
         document.querySelector('#choicefield').disabled = true;
-
+        
     }
 
     restart.addEventListener('click', function(e){
@@ -219,4 +257,6 @@ const wordCategories = {
         attempt.innerHTML = `<b>${3 - wordguess}</b>`;
         helpingpara.innerHTML = '';
         document.getElementById('guesses').innerHTML = '';
+        document.querySelector('.container').style.boxShadow = null;
+
     }
