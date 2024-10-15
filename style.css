@@ -5,10 +5,18 @@
         }
 
         body {
-            background-image: url(https://www.shutterstock.com/image-vector/optimism-seamless-vector-pattern-word-260nw-74051803.jpg);
+            height: 100vh;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            /* filter: blur(5px); */
+            filter: opacity(40%);
         }
 
         .container {
@@ -18,30 +26,32 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 3rem;
-
-        }
-
-        .glass {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            align-self: center;
-            background-color: rgba(255, 255, 255, 0.785);
         }
 
         .gamename {
-            font-family: "Kaushan Script", cursive;
+            font-family: "Quintessential", serif;
             font-size: 5rem;
             position: relative;
+            animation: floating 2s ease-in-out infinite;
+        }
 
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
         }
 
         p {
-            font-family: "Caveat", cursive;
+            font-family: "Julius Sans One", sans-serif;
             font-size: 2rem;
             position: relative;
-
+            margin: 0.5rem;
         }
 
         .form {
@@ -68,19 +78,19 @@
         }
 
         .labelname {
-            font-family: "Kaushan Script", cursive;
+            font-family: "Quintessential", serif;
             position: relative;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
 
         #guessfield {
             border: 0.5px solid black;
             position: relative;
-            border-radius: 2rem;
+            border-radius: 0.6rem;
             height: 2rem;
-            width: 10rem;
+            width: 15rem;
             margin-top: 0.5rem;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             text-align: center;
         }
 
@@ -91,11 +101,11 @@
             align-items: center;
             border: 0.5px solid black;
             position: relative;
-            border-radius: 2rem;
+            border-radius: 0.6rem;
             height: 2rem;
-            width: 12rem;
+            width: 15rem;
             margin-top: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             text-align: center;
         }
 
