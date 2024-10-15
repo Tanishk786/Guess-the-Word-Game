@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Guessing Game</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&display=swap"
-        rel="stylesheet">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quintessential&display=swap" rel="stylesheet">
+</head>
 
 <body>
     <div class="container">
-        <div class="glass"></div>
+
+        <img src="https://media.baamboozle.com/uploads/images/150627/1662380639_515738.jpeg" alt="Game">
+
         <h1 class="gamename"><b>Guess the Word</b></h1>
         <p><b>Can you determine the word that fits into chosen classification?</b></p>
         <p><b>You have 3 attempts to guess the word</b></p></br>
@@ -25,7 +31,8 @@
         <form class="form" id="wordguessform">
             <label for="choicefield" class="labelname"><b>Enter the Category</b>
                 <select id="choicefield">
-                    <!-- <option value="Preference" id="pref" class="box">Select Preference</option> -->
+
+                    <option value="" disabled selected hidden>Choose Preference</option>
                     <option value="Animals" id="ani" class="box">Animals</option>
                     <option value="Countries" id="con" class="box">Countries</option>
                     <option value="Indian_Rulers" id="irule" class="box">Indian Rulers</option>
@@ -51,5 +58,4 @@
         </div>
     </div>
 </body>
-  <script src="script.js"></script>
 </html>
