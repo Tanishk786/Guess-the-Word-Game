@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,48 +16,60 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quintessential&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <div class="container">
 
-        <img src="https://media.baamboozle.com/uploads/images/150627/1662380639_515738.jpeg" alt="Game">
+        <img class="backcover" src="Picsart_24-10-17_21-56-56-160.jpg" alt="Game">
 
         <h1 class="gamename"><b>Guess the Word</b></h1>
         <p><b>Can you determine the word that fits into chosen classification?</b></p>
         <p><b>You have 3 attempts to guess the word</b></p></br>
 
-        <form class="form" id="wordguessform">
-            <label for="choicefield" class="labelname"><b>Enter the Category</b>
-                <select id="choicefield">
+        <!-- making arrangement -->
 
-                    <option value="" disabled selected hidden>Choose Preference</option>
-                    <option value="Animals" id="ani" class="box">Animals</option>
-                    <option value="Countries" id="con" class="box">Countries</option>
-                    <option value="Indian_Rulers" id="irule" class="box">Indian Rulers</option>
-                    <option value="Indian_Cities" id="icity" class="box">Indian Cities</option>
-                    <option value="Technology" id="tech" class="box">Technology</option>
-                    <option value="Superheros" id="super" class="box">Superheros</option>
-                    <option value="Drinks" id="drink" class="box">Drinks</option>
-                    <option value="Professions" id="prof" class="box">Professions</option>
-                    <option value="Miscellaneous" id="misc" class="box">Miscellaneous</option>
-                </select>
-            </label>
+                <form class="form" id="wordguessform">
+                    <label for="choicefield" class="labelname"><b>Enter the Category</b>
+                        <select id="choicefield">
 
-            <label for="guessfield" class="labelname"><b>Guess the word</b></label>
-            <input type="text" id="guessfield" required>
-            <input type="submit" class="submitguess" value="Submit guess" id="subt">
-        </form>
+                            <option value="" disabled selected hidden>Choose Preference</option>
+                            <option value="Animals" id="ani" class="box">Animals</option>
+                            <option value="Countries" id="con" class="box">Countries</option>
+                            <option value="Indian_Rulers" id="irule" class="box">Indian Rulers</option>
+                            <option value="Indian_Cities" id="icity" class="box">Indian Cities</option>
+                            <option value="Technology" id="tech" class="box">Technology</option>
+                            <option value="Superheros" id="super" class="box">Superheros</option>
+                            <option value="Drinks" id="drink" class="box">Drinks</option>
+                            <option value="Professions" id="prof" class="box">Professions</option>
+                            <option value="Synonym of Happy" id="syno" class="box">Synonym of Happy</option>
+                            <option value="Synonym of Ordinary" id="ord" class="box">Synonym of Ordinary</option>
+                            <option value="Synonym of Beautiful" id="bet" class="box">Synonym of Beautiful</option>
+                            <option value="Antonym of Big" id="big" class="box">Antonym of Big</option>
+                        </select>
+                    </label>
 
-        <div class="resultpara">
-            <p><b>Previous Guesses : </b><span id="guesses"></span></p>
-            <p><b>Attempts Left : </b><span id="attempts"><b>3</b></span></p>
-            <p class="hint" id="hint"></p>
-           <button id="playagain">Play Again</button>
-        </div>
+                    <label for="guessfield" class="labelname guesslabel"><b>Guess the word</b></label>
+                    <input type="text" id="guessfield" required>
+                    <input type="submit" class="submitguess" value="Submit guess" id="subt">
+                </form>
+            
+                <div class="resultpara">
+                    <p><b>Previous Guesses : </b><span id="guesses"></span></p>
+                    <p><b>Attempts Left : </b><span id="attempts"><b>3</b></span></p>
+
+                    <p class="hint" id="hint"></p>
+                    <button id="playagain">Play Again</button>
+                </div>
+<div class="mouse">
+
+    <img id="micky" src="https://i.pinimg.com/originals/4a/60/02/4a6002b4a290e725515a30db4e1076cf.gif" alt="alt">
+
+</div>
+    
     </div>
 </body>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </html>
